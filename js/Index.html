@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- https://www.bootstrapcdn.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <!-- Her tilføjer vi VUE til vores browser -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Word Game</title>
+</head>
+
+<body>
+    <div>
+        <!-- <h1>Say Hello</h1> -->
+
+    </div>
+    <!-- the HTML element which will host our app -->
+    <!-- <div id="app">
+
+
+        <input id="inputField" v-model="name" placeholder="Name">
+        <button id="button" v-on:click="sayHello(name)" class="btn btn-primary">Do it!</button>
+        <div id="outputField" v-if="name"> {{message}}</div>
+    
+     <br>
+     <br>
+    
+        <input  v-model="age" placeholder="Age">
+        <button  v-on:click="viewAge(age)" class="btn btn-secondary">You got this!</button>
+        <div  v-if="age"> {{message2}}</div>
+    </div> -->
+
+    <!-- Exercise: JavaScript Vue Collect Words -->
+    <div id="app">
+        <input id="inputField" v-model="word" placeholder="Type a word">
+        <button v-on:click="saveButton(word)">Save</button>
+        <button v-on:click="showButton">Show</button>
+        <button v-on:click="clearButton">Clear</button>
+        <ol>
+            <li>
+                {{message3}}
+            </li>
+            <li>
+                {{wordLower}}
+            </li>
+            <li>
+                {{wordUpper}}
+            </li>
+            <li>
+                {{wordCap}}
+            </li>
+            <li>
+                {{wordEndCap}}
+            </li>
+            <li>
+                {{reversed}}
+            </li>
+        </ol>
+        {{errormessage}}
+    
+
+    <table class="table">
+        <tr>
+            <td>
+                {{message3}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{wordLower}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{wordUpper}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{wordCap}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{wordEndCap}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{reversed}}
+            </td>
+        </tr>
+
+    </table>
+</div>
+    <!-- At the bottom of the HTML body section add a reference to the JavaScript file -->
+    <script src="/js/Index.js"></script>
+</body>
+
+</html>
